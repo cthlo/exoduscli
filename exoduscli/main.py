@@ -5,7 +5,6 @@ import sys
 import threading
 import runpy
 import os
-import webbrowser
 import base64
 from os import path
 from itertools import count
@@ -14,6 +13,7 @@ from urlparse import urlparse
 import config
 import addons
 import cli
+from lib import webbrowser
 from fakexbmc import xbmc, xbmcaddon, xbmcgui, xbmcplugin, xbmcvfs
 
 def _run_exodus(*args):
