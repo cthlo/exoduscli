@@ -42,5 +42,4 @@ def setResolvedUrl(handle, succeeded, listitem):
     items.append((path, li))
 
     for url, item in items:
-        print url
         addDirectoryItem(handle, url, item)
