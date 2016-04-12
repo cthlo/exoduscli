@@ -80,7 +80,8 @@ def executebuiltin(function):
     elif function == 'Dialog.Close(busydialog)':
         pass
 
-    raise NotImplementedError
+    else:
+        raise NotImplementedError
 
 
 def getSkinDir():
