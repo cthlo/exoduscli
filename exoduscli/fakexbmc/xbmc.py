@@ -45,7 +45,8 @@ def getCondVisibility(condition):
     m = _re_container_content.match(condition)
     if m:
         content = m.groups()[0]
-        return content == xbmcplugin._contents
+        handle = sys.argv[1]
+        return content == xbmcplugin._contents[handle]
 
     raise NotImplementedError
 
