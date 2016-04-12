@@ -189,13 +189,15 @@ class BackgroundBrowser(GenericBrowser):
         cmdline = [self.name] + [arg.replace("%s", url)
                                  for arg in self.args]
         try:
+            devnull = file(os.devnull, "r+")
             if sys.platform[:3] == 'win':
-                p = subprocess.Popen(cmdline)
+                p = subprocess.Popen(cmdline, stdout=devnull, stderr=devnull)
             else:
                 setsid = getattr(os, 'setsid', None)
                 if not setsid:
                     setsid = getattr(os, 'setpgrp', None)
-                p = subprocess.Popen(cmdline, close_fds=True, preexec_fn=setsid)
+                p = subprocess.Popen(cmdline, close_fds=True, preexec_fn=setsid,
+                                     stdout=devnull, stderr=devnull)
             return (p.poll() is None)
         except OSError:
             return False
