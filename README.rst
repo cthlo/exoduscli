@@ -30,6 +30,8 @@ pip
     [  5] Search
     
 
+``exoduscli.exe`` instead of ``exoduscli`` for Windows
+
 From source
 ~~~~~~~~~~~~
 
