@@ -1,7 +1,7 @@
 import base64
 
 from urlparse import urlparse
-from fakexbmc import xbmcgui
+from exoduscli.fakexbmc import xbmcgui
 
 _dirs = {}
 _contents = {}
