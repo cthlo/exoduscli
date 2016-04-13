@@ -9,8 +9,7 @@ import urllib2
 from StringIO import StringIO
 from os import path, makedirs
 
-import config
-import cli
+from exoduscli import config, cli
 
 def _download(id, b64url, zipmd5):
     '''Download one addon from base64 encoded url

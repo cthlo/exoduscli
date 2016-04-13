@@ -10,10 +10,8 @@ from os import path
 from itertools import count
 from urlparse import urlparse
 
-import config
-import addons
-import cli
 from lib import webbrowser
+from exoduscli import config, addons, cli
 from fakexbmc import xbmc, xbmcaddon, xbmcgui, xbmcplugin, xbmcvfs
 
 def _run_exodus(*args):

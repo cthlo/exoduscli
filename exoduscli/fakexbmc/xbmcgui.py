@@ -1,4 +1,4 @@
-import cli
+from exoduscli import cli
 
 class ListItem(object):
     def __init__(self, label='', label2='', iconImage='', thumbnailImage='', path=''):

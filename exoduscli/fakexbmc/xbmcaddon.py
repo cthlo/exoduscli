@@ -1,6 +1,6 @@
-import config
-import addonconfigs
 from os import path
+
+from exoduscli import config, addonconfigs
 
 class Addon(object):
     def __init__(self, id=None):

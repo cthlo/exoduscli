@@ -4,9 +4,8 @@ import os.path
 from urlparse import urlparse, urljoin
 from time import sleep as _sleep
 
-import config
-import cli
-import xbmcplugin
+from fakexbmc import xbmcplugin
+from exoduscli import config, cli
 
 PLAYLIST_VIDEO = 1
 ENGLISH_NAME = 2
