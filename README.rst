@@ -11,7 +11,9 @@ Installation and usage
 pip
 ~~~~
 
-    $ pip install git+git://github.com/cthlo/exoduscli.git@master
+.. code-block:: bash
+
+    $ pip2 install git+git://github.com/cthlo/exoduscli.git@master
     $ exoduscli
     Loading...
     _____________________
@@ -25,6 +27,8 @@ pip
 
 From source
 ~~~~~~~~~~~~
+
+.. code-block:: bash
 
     $ git clone https://github.com/cthlo/exoduscli
     $ cd exoduscli
