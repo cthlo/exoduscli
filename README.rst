@@ -1,7 +1,12 @@
 exoduscli
 ==========
 
-exoduscli is a wrapped version of the XBMC addon, Exodus. It harnesses the power of Exodus by wrapping it with a fake/stubbed XBMC interface (`exoduscli/fakexbmc`).
+.. contents::
+
+Summary
+--------
+
+exoduscli is a wrapped version of the XBMC addon, Exodus. It harnesses the power of Exodus by wrapping it with a fake/stubbed XBMC interface (``exoduscli/fakexbmc``).
 
 This fake interface will not work on other XBMC addons because it is tailor-made for Exodus. Exodus and its dependencies are downloaded in the first run.
 
