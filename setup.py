@@ -13,7 +13,7 @@ setup(
     license      = 'MIT',
     packages     = ['exoduscli', 'exoduscli.fakexbmc', 'exoduscli.lib'],
     entry_points = {
-        'console_script': [
+        'console_scripts': [
             'exoduscli = exoduscli.main:main'
         ]
     }
