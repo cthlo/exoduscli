@@ -11,37 +11,33 @@ Installation and usage
 pip
 ~~~~
 
-```bash
-$ pip install git+git://github.com/cthlo/exoduscli.git@master
-$ exoduscli
-Loading...
-_____________________
-[  0] << Exit
-[  1] Movies
-[  2] TV Shows
-[  3] Latest Movies
-[  4] Latest Episodes
-[  5] Search
-
-```
+    $ pip install git+git://github.com/cthlo/exoduscli.git@master
+    $ exoduscli
+    Loading...
+    _____________________
+    [  0] << Exit
+    [  1] Movies
+    [  2] TV Shows
+    [  3] Latest Movies
+    [  4] Latest Episodes
+    [  5] Search
+    
 
 From source
 ~~~~~~~~~~~~
 
-```bash
-$ git clone https://github.com/cthlo/exoduscli
-$ cd exoduscli
-$ python2 -m exoduscli.main
-Loading...
-_____________________
-[  0] << Exit
-[  1] Movies
-[  2] TV Shows
-[  3] Latest Movies
-[  4] Latest Episodes
-[  5] Search
-
-```
+    $ git clone https://github.com/cthlo/exoduscli
+    $ cd exoduscli
+    $ python2 -m exoduscli.main
+    Loading...
+    _____________________
+    [  0] << Exit
+    [  1] Movies
+    [  2] TV Shows
+    [  3] Latest Movies
+    [  4] Latest Episodes
+    [  5] Search
+    
 
 Requirements
 -------------
