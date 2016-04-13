@@ -6,9 +6,10 @@ exoduscli is a wrapped version of the XBMC addon, Exodus. It harnesses the power
 This fake interface will not work on other XBMC addons because it is tailor-made for Exodus. Exodus and its dependencies are downloaded in the first run.
 
 Installation and usage
-------------
+-----------------------
 
-### pip
+pip
+~~~~
 
 ```bash
 $ pip install git+git://github.com/cthlo/exoduscli.git@master
@@ -24,7 +25,8 @@ _____________________
 
 ```
 
-### From source
+From source
+~~~~~~~~~~~~
 
 ```bash
 $ git clone https://github.com/cthlo/exoduscli
@@ -42,6 +44,6 @@ _____________________
 ```
 
 Requirements
-------------
+-------------
 
 * Python2 (>=2.6)
