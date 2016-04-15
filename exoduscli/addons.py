@@ -34,7 +34,9 @@ def _download(id, b64url, zipmd5):
         with zipfile.ZipFile(f) as z:
             z.extractall(config.addonsdir)
     except:
-        shutil.rmtree(dir)
+        if path.isdir(dir):
+            shutil.rmtree(dir)
+        raise
     finally:
         f.close()
     cli.message('Loaded %s' % id)
