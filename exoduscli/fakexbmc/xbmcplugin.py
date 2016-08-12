@@ -1,5 +1,3 @@
-import base64
-
 from urlparse import urlparse
 from exoduscli.fakexbmc import xbmcgui
 
@@ -22,7 +20,7 @@ def setContent(handle, content):
 
 
 def setProperty(handle, key, value):
-    raise NotImplementedError
+    pass
 
 
 def setResolvedUrl(handle, succeeded, listitem):
@@ -31,14 +29,13 @@ def setResolvedUrl(handle, succeeded, listitem):
     scheme = urlparts.scheme
 
     items = []
-    b64url = base64.b64encode(url)
 
     if scheme == 'http' or scheme == 'https':
-        path = 'browser://%s' % b64url
+        path = 'browser://%s' % url
         li = xbmcgui.ListItem('Open in browser', path=path)
         items.append((path, li))
 
-    path = 'print://%s' % b64url
+    path = 'print://%s' % url
     li = xbmcgui.ListItem('Show URL', path=path)
     items.append((path, li))
 

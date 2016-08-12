@@ -2,10 +2,14 @@
 '''
 
 import sys
+
+if sys.version_info < (2, 6) or sys.version_info >= (3, ):
+    print('Python2 (>= 2.6) is required')
+    sys.exit()
+
 import threading
 import runpy
 import os
-import base64
 from os import path
 from itertools import count
 from urlparse import urlparse
@@ -31,7 +35,10 @@ def _run_exodus(*args):
     sys.argv = list(args)
     # note: cannot use __import__ because Exodus spawns threads that do import
     # so that would cause deadlock
+    old_modules = set(sys.modules.keys()) # unload the newly added modules after runpy
     runpy.run_module(module)
+    for k in set(sys.modules.keys()) - old_modules:
+        del sys.modules[k]
 
 
 def _dir_select(handle):
@@ -52,7 +59,7 @@ def _dir_select(handle):
         _dirs[handle] = [i for i in _dirs[handle] if i[1].getLabel() not in ['Tools', 'Channels']]
 
     for _, listitem, isfolder in _dirs[handle]:
-        options.append('%s' % listitem.getLabel())
+        options.append(listitem.getLabel())
 
     idx = cli.select(options)
     if idx > 0:
@@ -75,19 +82,19 @@ def _determine_args(handle, index):
     if scheme == 'plugin':
         base = '%s://%s' % (scheme, urlparts.netloc)
         query = '?%s' % urlparts.query
-        return (base, handle+1, query)
+        return (base, handle + 1, query)
 
     elif scheme == 'browser':
-        url = base64.b64decode(urlparts.netloc)
+        link = url[len('browser://'):]
         try:
-            webbrowser.get().open(url)
+            webbrowser.get().open(link)
         except webbrowser.Error:
             cli.message('Failed to open URL in browser')
         return None
 
     elif scheme == 'print':
-        url = base64.b64decode(urlparts.netloc)
-        cli.message(url)
+        link = url[len('print://'):]
+        cli.message(link)
         return None
 
     else:

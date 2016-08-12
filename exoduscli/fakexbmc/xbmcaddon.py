@@ -34,4 +34,6 @@ class Addon(object):
             return self.id
         elif id == 'version':
             return '0.0.0'
+        elif id == 'fanart':
+            return path.join(config.addonsdir, self.id, 'fanart.jpg')
         raise NotImplementedError

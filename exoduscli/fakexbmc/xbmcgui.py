@@ -1,5 +1,9 @@
 from exoduscli import cli
 
+NOTIFICATION_INFO = 'info'
+NOTIFICATION_WARNING = 'warning'
+NOTIFICATION_ERROR = 'error'
+
 class ListItem(object):
     def __init__(self, label='', label2='', iconImage='', thumbnailImage='', path=''):
         self.props = {}
@@ -26,10 +30,16 @@ class ListItem(object):
     def getLabel(self):
         return self.label
 
+    def setArt(self, dictionary):
+        pass
 
+
+_window_props = {}
 class Window(object):
     def __init__(self, windowId=-1):
-        self.props = {}
+        if windowId not in _window_props:
+            _window_props[windowId] = {}
+        self.props = _window_props[windowId]
 
     def getProperty(self, key):
         return self.props.get(key.lower(), '')
@@ -62,8 +72,12 @@ class DialogProgress(object):
         return False
 
 
-class Dialog(object):
+class DialogProgressBG(object):
     pass
+
+class Dialog(object):
+    def notification(self, heading, message, icon=NOTIFICATION_INFO, time=5000, sound=True):
+        pass
 
 class WindowDialog(object):
     pass
