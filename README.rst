@@ -18,7 +18,7 @@ pip
 
 .. code-block:: bash
 
-    $ pip2 install git+git://github.com/cthlo/exoduscli.git@master
+    $ pip2 install --upgrade --user git+git://github.com/cthlo/exoduscli.git@master
     $ exoduscli
     Loading...
     _____________________
