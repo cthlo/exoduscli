@@ -1,9 +1,11 @@
 from os import path
-__dir__ = path.abspath(path.dirname(__file__))
+from lib import appdirs
 
-specialroot = path.join(__dir__, 'fakexbmc', 'special')
-addonsdir = path.join(__dir__, 'addons')
-logfile = path.join(__dir__, 'fakexbmc.log')
+_appdir = appdirs.user_data_dir('exoduscli')
+
+specialroot = path.join(_appdir, 'fakexbmc', 'special')
+addonsdir = path.join(_appdir, 'addons')
+logfile = path.join(_appdir, 'fakexbmc.log')
 exodus = dict(
     id = 'plugin.video.exodus',
     b64url = 'aHR0cHM6Ly9vZmZzaG9yZWdpdC5jb20vZXhvZHVzL3BsdWdpbi52aWRlby5leG9kdXMvcGx1Z2luLnZpZGVvLmV4b2R1cy0yLjAuNS56aXA=',
