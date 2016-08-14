@@ -39,13 +39,18 @@ def getInfoLabel(infotag):
 
 
 _re_container_content = re.compile(r'Container.Content\(([^\)]+)\)')
+_re_has_addon = re.compile(r'System.HasAddon\(([^\)]+)\)')
 def getCondVisibility(condition):
     if condition == 'Window.IsActive(virtualkeyboard)':
         return False
     if condition == 'Window.IsActive(yesnoDialog)':
         return False
-    if condition == 'System.HasAddon(script.exodus.artwork)':
-        return False
+
+    m = _re_has_addon.match(condition)
+    if m:
+        addon = m.group(1)
+        hasaddon = addon in [config.exodus['id']]+[d['id'] for d in config.libs]
+        return hasaddon
 
     m = _re_container_content.match(condition)
     if m:
