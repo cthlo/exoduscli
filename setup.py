@@ -7,7 +7,7 @@ if sys.version_info < (2, 6) or sys.version_info >= (3, ):
 
 setup(
     name         = 'exoduscli',
-    version      = '1.0.1',
+    version      = '1.1.0',
     url          = 'https://github.com/cthlo/exoduscli',
     author       = 'cthlo',
     license      = 'MIT',
