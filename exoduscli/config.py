@@ -16,9 +16,9 @@ exodus = dict(
 libs = [
     dict(
         id = 'script.module.urlresolver',
-        b64url = 'aHR0cHM6Ly9vZmZzaG9yZWdpdC5jb20vdHZhcmVzb2x2ZXJzL3R2YS1jb21tb24tcmVwb3NpdG9yeS9yYXcvbWFzdGVyL3ppcHMvc2NyaXB0Lm1vZHVsZS51cmxyZXNvbHZlci9zY3JpcHQubW9kdWxlLnVybHJlc29sdmVyLTMuMC4xNi56aXA=',
-        zipmd5 = 'fa7a8c2b27f40a96212511057b26a909',
+        b64url = 'aHR0cHM6Ly9vZmZzaG9yZWdpdC5jb20vdHZhcmVzb2x2ZXJzL3R2YS1jb21tb24tcmVwb3NpdG9yeS9yYXcvbWFzdGVyL3ppcHMvc2NyaXB0Lm1vZHVsZS51cmxyZXNvbHZlci9zY3JpcHQubW9kdWxlLnVybHJlc29sdmVyLTMuMC4xOS56aXA=',
+        zipmd5 = '4b78acc8d1f61cc7765071bbcbb8e09a',
         libpath = 'lib',
-        version = '3.0.16'
+        version = '3.0.19'
     )
 ]
