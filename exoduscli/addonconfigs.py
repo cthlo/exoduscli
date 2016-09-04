@@ -264,7 +264,7 @@ settings = {
         'StreamintoResolver_priority'          : '101',
         'TeramixerResolver_enabled'            : 'true',
         'TeramixerResolver_priority'           : '101',
-        'TheVideoResolver_enabled'             : 'true',
+        'TheVideoResolver_enabled'             : 'false', # default is 'true'
         'TheVideoResolver_priority'            : '101',
         'TheVideosResolver_auto_pick'          : 'false',
         'TheVideosResolver_enabled'            : 'true',
