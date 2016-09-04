@@ -48,6 +48,7 @@ settings = {
         'provider.moviesplanet' : 'true',
         'provider.ororo'        : 'true',
         'provider.library'      : 'true',
+        'provider.mfree'        : 'true',
         'provider.dayt'         : 'true',
         'provider.genvideo'     : 'true',
         'provider.hevcfilm'     : 'true',

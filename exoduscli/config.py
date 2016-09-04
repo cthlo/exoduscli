@@ -8,10 +8,10 @@ addonsdir = path.join(_appdir, 'addons')
 logfile = path.join(_appdir, 'fakexbmc.log')
 exodus = dict(
     id = 'plugin.video.exodus',
-    b64url = 'aHR0cHM6Ly9vZmZzaG9yZWdpdC5jb20vZXhvZHVzL3BsdWdpbi52aWRlby5leG9kdXMvcGx1Z2luLnZpZGVvLmV4b2R1cy0yLjAuNS56aXA=',
-    zipmd5 = '728688c64599c54d70e5483c3b9029a1',
+    b64url = 'aHR0cHM6Ly9vZmZzaG9yZWdpdC5jb20vZXhvZHVzL3BsdWdpbi52aWRlby5leG9kdXMvcGx1Z2luLnZpZGVvLmV4b2R1cy0yLjAuOC56aXA=',
+    zipmd5 = 'd1bf483d48be348c916fb95750b30e61',
     entryfile = 'exodus.py',
-    version = '2.0.5'
+    version = '2.0.8'
 )
 libs = [
     dict(
